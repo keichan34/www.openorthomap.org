@@ -1,0 +1,13 @@
+baseURL = 'https://www.openorthomap.org/'
+languageCode = 'en-us'
+title = 'OpenOrthoMap'
+theme = 'ananke'
+enableRobotsTXT = true
+
+[[params.ananke_socials]]
+name = "twitter"
+url = "https://twitter.com/sleepy_keita"
+
+[[params.ananke_socials]]
+name = "github"
+url = "https://github.com/keichan34/openorthomap"
