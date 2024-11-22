@@ -16,8 +16,8 @@ Each S2 cell with relevant data, from level 0 to the maximum depth of level 12, 
 ```csv
 meta,version,1
 meta,count,2
-file,1,Hello World,hello-world.pmtiles,1.000
-file,1,Foo,foo.pmtiles,0.750
+file,1,Hello World,0123456789abcedf,1.000
+file,1,Foo,1123456789abcedf,0.750
 ```
 
 ### Index File Breakdown
@@ -29,7 +29,7 @@ file,1,Foo,foo.pmtiles,0.750
    The second line (`meta,count,2`) indicates that two files are associated with this S2 cell. Note that a single file can span multiple cells, typically calculated using a bounding box around the file’s coverage.
 
 3. File References:
-   Each `file` line includes the following fields: the line type (`file`), file format (`1`), file display name, file name, and cell intersection area. Currently, format `1` corresponds to PMTiles Tileset (Raster). Cell intersection area is in a range 0 to 1, corresponding to the ratio of intersection area to cell area.
+   Each `file` line includes the following fields: the line type (`file`), file format (`1`), file display name, SHA256 hash, and cell intersection area. Currently, format `1` corresponds to PMTiles Tileset (Raster). Cell intersection area is in a range 0 to 1, corresponding to the ratio of intersection area to cell area.
 
 ### Handling File Limits
 
@@ -47,5 +47,6 @@ This spec is under heavy development and may change without warning in the futur
 
 Changelog:
 
+* Change filename to SHA256
 * Add display name, intersection area to file metadata
 * Remove subcell counts
